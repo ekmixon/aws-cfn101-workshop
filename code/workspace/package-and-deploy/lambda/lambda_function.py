@@ -5,9 +5,7 @@ from pytz import timezone, utc
 
 def handler(event, context):
     payload = event["time_zone"]
-    message = "Current date/time in TimeZone *{}* is: {}".format(
-        payload, _timezone(payload)
-    )
+    message = f"Current date/time in TimeZone *{payload}* is: {_timezone(payload)}"
 
     return {"message": message}
 
